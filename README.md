@@ -12,6 +12,7 @@ This project demonstrates how to implement a basic MCP client that can run on Ni
 - Simple tool calling demonstration
 - Designed for Nintendo Switch homebrew environment
 - Lightweight and efficient for embedded systems
+- Configuration file support
 
 ## Requirements
 
@@ -60,6 +61,8 @@ This project demonstrates how to implement a basic MCP client that can run on Ni
 - `src/main.cpp` - Main application entry point
 - `src/mcp_client.h` - MCP client header file
 - `src/mcp_client.cpp` - MCP client implementation
+- `data/mcp_config.json` - MCP configuration file
+- `include/json/json.h` - JSON library header (provided by switch-jsoncpp)
 - `Makefile` - Build configuration
 
 ## Implementation Details
@@ -68,6 +71,7 @@ This demo implements a simplified version of the MCP protocol with:
 - Tool calling functionality
 - Basic JSON message handling
 - Switch-specific input handling
+- Configuration file support
 
 The implementation is designed to be lightweight and efficient for the Switch's hardware constraints.
 
@@ -77,6 +81,8 @@ The implementation is designed to be lightweight and efficient for the Switch's 
 - File system access tools
 - More comprehensive protocol implementation
 - Integration with actual LLM services
+- Support for resources and prompts
+- Persistent configuration storage
 
 ## License
 
