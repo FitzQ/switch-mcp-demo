@@ -1,0 +1,38 @@
+{
+  "mcp": {
+    "version": "1.0",
+    "name": "Switch MCP Demo",
+    "description": "A demonstration of MCP protocol implementation for Nintendo Switch"
+  },
+  "tools": [
+    {
+      "name": "demo_tool",
+      "description": "A demonstration tool that returns a simple response",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "A message to include in the response"
+          }
+        }
+      }
+    },
+    {
+      "name": "system_info",
+      "description": "Returns information about the Switch system",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "file://readme",
+      "name": "README",
+      "description": "Information about this MCP implementation",
+      "mimeType": "text/plain"
+    }
+  ]
+}
