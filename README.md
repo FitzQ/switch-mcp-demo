@@ -1,10 +1,10 @@
-# Switch MCP Demo
+# Switch MCP Server Demo
 
-A demonstration of a Model Context Protocol (MCP) client implementation for Nintendo Switch homebrew.
+A demonstration of a Model Context Protocol (MCP) server implementation for Nintendo Switch homebrew.
 
 ## Overview
 
-This project demonstrates how to implement a basic MCP client that can run on Nintendo Switch homebrew environment. The Model Context Protocol allows language models to interact with tools and resources in a standardized way.
+This project demonstrates how to implement a basic MCP server that can run on Nintendo Switch homebrew environment. The Model Context Protocol allows language models to interact with tools and resources in a standardized way.
 
 ## Features
 
@@ -52,15 +52,15 @@ This project demonstrates how to implement a basic MCP client that can run on Ni
 ## Usage
 
 1. Launch the homebrew application from the Switch homebrew menu
-2. The application will initialize the MCP client
-3. Press A to call a demo tool
+2. The application will initialize the MCP server
+3. Press A to start the MCP server
 4. Press + to exit the application
 
 ## Project Structure
 
 - `src/main.cpp` - Main application entry point
-- `src/mcp_client.h` - MCP client header file
-- `src/mcp_client.cpp` - MCP client implementation
+- `src/mcp_server.h` - MCP server header file
+- `src/mcp_server.cpp` - MCP server implementation
 - `data/mcp_config.json` - MCP configuration file
 - `include/json/json.h` - JSON library header (provided by switch-jsoncpp)
 - `Makefile` - Build configuration
@@ -77,7 +77,7 @@ The implementation is designed to be lightweight and efficient for the Switch's 
 
 ## Future Enhancements
 
-- Network connectivity for remote MCP servers
+- Network connectivity for remote MCP clients
 - File system access tools
 - More comprehensive protocol implementation
 - Integration with actual LLM services
