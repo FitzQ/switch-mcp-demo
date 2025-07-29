@@ -1,0 +1,17 @@
+# Build output
+build/
+nro/
+*.elf
+*.nro
+*.nso
+*.map
+*.bin
+
+# IDE files
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
