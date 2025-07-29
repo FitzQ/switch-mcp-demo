@@ -1,17 +1,17 @@
 #include <switch.h>
 #include <iostream>
-#include "mcp_client.h"
+#include "mcp_server.h"
 
 int main(int argc, char* argv[]) {
     // Initialize the Switch console
     consoleInit(NULL);
     
     // Print welcome message
-    std::cout << "Switch MCP Demo" << std::endl;
-    std::cout << "Initializing MCP client..." << std::endl;
+    std::cout << "Switch MCP Server Demo" << std::endl;
+    std::cout << "Initializing MCP server..." << std::endl;
     
-    // Initialize MCP client
-    MCPClient client;
+    // Initialize MCP server
+    MCPServer server;
     
     // Main loop
     while(appletMainLoop()) {
@@ -27,8 +27,8 @@ int main(int argc, char* argv[]) {
         }
         
         if (kDown & KEY_A) {
-            std::cout << "A button pressed - calling MCP tool" << std::endl;
-            client.callTool("demo_tool", "{}");
+            std::cout << "A button pressed - starting MCP server" << std::endl;
+            server.start();
         }
         
         // Update the console
