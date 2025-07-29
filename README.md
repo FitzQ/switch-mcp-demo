@@ -17,14 +17,66 @@ This project demonstrates how to implement a basic MCP client that can run on Ni
 
 - Nintendo Switch with custom firmware (Atmosphere recommended)
 - Development environment with libnx
+- devkitPro with switch support
+- jsoncpp library for JSON handling
 
 ## Building
 
-Instructions for building will be added later.
+1. Ensure you have devkitPro installed with switch support:
+   ```bash
+   sudo (dkp-)pacman -S switch-dev switch-portlibs
+   ```
+
+2. Install the jsoncpp library:
+   ```bash
+   sudo (dkp-)pacman -S switch-jsoncpp
+   ```
+
+3. Clone this repository:
+   ```bash
+   git clone https://github.com/FitzQ/switch-mcp-demo.git
+   cd switch-mcp-demo
+   ```
+
+4. Build the project:
+   ```bash
+   make
+   ```
+
+5. The resulting .nro file can be copied to your Switch SD card at:
+   ```
+   /switch/switch-mcp-demo/switch-mcp-demo.nro
+   ```
 
 ## Usage
 
-Instructions for usage will be added later.
+1. Launch the homebrew application from the Switch homebrew menu
+2. The application will initialize the MCP client
+3. Press A to call a demo tool
+4. Press + to exit the application
+
+## Project Structure
+
+- `src/main.cpp` - Main application entry point
+- `src/mcp_client.h` - MCP client header file
+- `src/mcp_client.cpp` - MCP client implementation
+- `Makefile` - Build configuration
+
+## Implementation Details
+
+This demo implements a simplified version of the MCP protocol with:
+- Tool calling functionality
+- Basic JSON message handling
+- Switch-specific input handling
+
+The implementation is designed to be lightweight and efficient for the Switch's hardware constraints.
+
+## Future Enhancements
+
+- Network connectivity for remote MCP servers
+- File system access tools
+- More comprehensive protocol implementation
+- Integration with actual LLM services
 
 ## License
 
